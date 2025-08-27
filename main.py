@@ -14,8 +14,10 @@ G.add_edges_from (
 coloring = nx.coloring.greedy_color(G, strategy='largest_first')
 node_colors = [coloring[node] for node in G.nodes()]
 
+slots = {0: "9h-11h", 1: "11h-13h", 2: "14h-16h"}
+timetable = {subject: slots[color] for subject, color in coloring.items()}
+print(timetable)
+
 pos = nx.spring_layout (G)
-# labels = nx.get_edge_attributes (G, 'weight')
 nx.draw (G, pos, with_labels = True, node_color =node_colors)
-# nx.draw_networkx_edge_labels (G , pos , edge_labels = labels)
 plt.show()
