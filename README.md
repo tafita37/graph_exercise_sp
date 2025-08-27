@@ -43,4 +43,5 @@ To provide practical applications of graph theory algorithms in exam scheduling,
 ```bash
 git clone https://github.com/tafita37/graph_exercise_sp.git
 cd graph_exercise_sp
+pip install -r requirements.txt
 ```
